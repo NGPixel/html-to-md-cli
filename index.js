@@ -29,6 +29,7 @@ const content = $('.entry-content').html()
 const title = $('h1.entry-title')?.text()
 
 // Convert to Markdown
+TurndownService.prototype.escape = (txt) => txt
 const turndown = new TurndownService({
   headingStyle: 'atx',
   hr: '---',
